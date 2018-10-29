@@ -1,0 +1,9 @@
+profiling:/nfs/stak/users/brempelr/cs362/CS362-004-F2018/projects/brempelr/dominion/rngs.gcda:Version mismatch - expected 408R got 402*
+profiling:/nfs/stak/users/brempelr/cs362/CS362-004-F2018/projects/brempelr/dominion/dominion.gcda:Version mismatch - expected 408R got 402*
+Testing drawCard.
+RANDOM TESTS.
+ALL TESTS OK
+File 'dominion.c'
+No executable lines
+Removing 'dominion.c.gcov'
+

@@ -1,0 +1,57 @@
+        -:    0:Source:unittest1.c
+        -:    0:Programs:7
+        -:    1:#include "dominion.h"
+        -:    2:#include "rngs.h"
+        -:    3:#include <stdlib.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include "assert.h"
+        -:    6:
+        -:    7:
+function main called 3 returned 100% blocks executed 77%
+        3:    8:int main(){
+        -:    9:	
+        -:   10:	struct gameState G;
+        -:   11:
+        3:   12:	int m = 0;
+        3:   13:	int k[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        3:   14:	int seed = 50;
+        -:   15:
+        3:   16:	initializeGame(2, k, seed, &G);
+call    0 returned 100%
+        -:   17:
+        3:   18:	m = isGameOver(&G);
+call    0 returned 100%
+        -:   19:
+        3:   20:	assert(m != 1);	
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+        -:   21:
+        3:   22:	G.supplyCount[2] = 0;
+        3:   23:	G.supplyCount[3] = 0;
+        3:   24:	G.supplyCount[4] = 0;
+        -:   25:
+        3:   26:	m = isGameOver(&G);
+call    0 returned 100%
+        -:   27:
+        3:   28:	assert(m == 1);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+        -:   29:
+        3:   30:	G.supplyCount[2] = 1;
+        -:   31:
+        3:   32:	G.supplyCount[province] = 0;
+        -:   33:
+        3:   34:	m = isGameOver(&G);
+call    0 returned 100%
+        -:   35:
+        3:   36:	assert(m == 1);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+        -:   37:
+        3:   38:	printf("isGameOver Test Completed.\n");
+call    0 returned 100%
+        3:   39:	return 0;
+        -:   40:}
